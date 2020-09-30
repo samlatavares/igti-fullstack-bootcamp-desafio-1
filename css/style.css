@@ -1,5 +1,31 @@
 body {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  align-content: center;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+}
+
+#divBusca {
+  display: flex;
+  align-self: center;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#divResultado {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+#divEstatisticas,
+#divEncontrados {
+  width: 50%;
+}
+
+button {
+  width: 20px;
 }
