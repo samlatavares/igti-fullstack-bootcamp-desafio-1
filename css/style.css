@@ -4,7 +4,6 @@ body {
   justify-content: center;
   align-content: center;
   text-align: center;
-  font-family: 'Lato', sans-serif;
 }
 
 #divBusca {
@@ -17,8 +16,8 @@ body {
 
 #divResultado {
   display: flex;
-  flex-direction: column;
   width: 90%;
+  align-content: space-around;
 }
 
 #divEstatisticas,
