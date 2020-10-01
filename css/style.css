@@ -6,7 +6,7 @@ body {
   text-align: center;
 }
 
-#divBusca {
+#divSearch {
   display: flex;
   align-self: center;
   text-align: center;
@@ -14,17 +14,35 @@ body {
   justify-content: space-between;
 }
 
-#divResultado {
+#divResult {
   display: flex;
   width: 90%;
-  align-content: space-around;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
-#divEstatisticas,
-#divEncontrados {
-  width: 50%;
+#divStatistics,
+#divFilteredUsers {
+  width: 30%;
+  align-self: center;
+  justify-content: center;
 }
 
 button {
   width: 20px;
+}
+
+img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  margin-left: 10px;
+  border-radius: 50%;
+}
+
+.user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
