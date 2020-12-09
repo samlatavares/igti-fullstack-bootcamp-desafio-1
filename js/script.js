@@ -2,8 +2,8 @@ let allUsers = [];
 let filteredUsers = [];
 let lblUsers = null;
 let lblStatistics = null;
-let btnBuscar = null;
-let txtBusca = null;
+let btnSearch = null;
+let txtSearch = null;
 let countMale = 0;
 let countFemale = 0;
 let sumAge = 0;
@@ -12,11 +12,11 @@ let ageAverage = 0;
 window.addEventListener('load', () => {
   lblUsers = document.querySelector('#lblUsers');
   lblStatistics = document.querySelector('#lblStatistics');
-  btnBuscar = document.querySelector('#btnBuscar');
-  txtBusca = document.querySelector('#txtBusca');
+  btnSearch = document.querySelector('#btnSearch');
+  txtSearch = document.querySelector('#txtSearch');
 
-  btnBuscar.addEventListener('click', filterData);
-  txtBusca.addEventListener('keypress', () => {
+  btnSearch.addEventListener('click', filterData);
+  txtSearch.addEventListener('keypress', () => {
     if (event.keyCode === 13) filterData();
   });
 
@@ -43,9 +43,9 @@ async function fetchDados() {
 }
 
 function filterData(event) {
-  if (txtBusca.value != null && txtBusca.value.trim() != '') {
+  if (txtSearch.value != null && txtSearch.value.trim() != '') {
     filteredUsers = allUsers.filter((user) =>
-      user.name.toUpperCase().includes(txtBusca.value.toUpperCase())
+      user.name.toUpperCase().includes(txtSearch.value.toUpperCase())
     );
   } else {
     filteredUsers = [];
@@ -72,7 +72,7 @@ function renderUsersList() {
         </div>
         <div>
           <ul>
-            <li>${name}, ${age}</li>
+            <li><b>${name}</b>, ${age}</li>
           </ul>
         </div>
       </div>  
@@ -116,14 +116,14 @@ function renderStatistics() {
     ageAverage = sumAge / filteredUsers.length;
 
     const statisticHTML =
-      'Sexo masculino: ' +
+      '<b>Sexo masculino: </b>' +
       countMale +
-      '</br> Sexo Feminino: ' +
+      '</br> <b>Sexo Feminino: </b>' +
       countFemale +
-      '</br> Soma das idades: ' +
+      '</br> <b>Soma das idades: </b>' +
       sumAge +
-      '</br> Média das idades: ' +
-      ageAverage;
+      '</br> <b>Média das idades: </b>' +
+      ageAverage.toFixed(2);
 
     statisticsHTML += statisticHTML;
   } else {

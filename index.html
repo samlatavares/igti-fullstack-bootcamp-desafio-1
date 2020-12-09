@@ -1,30 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pesquisa de Usuários</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
-  <body>
-    <h1>Pesquisa de Usuários</h1>
-    <div id="divSearch">
-      <label>Busca: </label>
-      <input type="text" id="txtBusca" />
-      <input type="button" value="Buscar" id="btnBuscar" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pesquisa de Usuários</title>
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <h1>Pesquisa de Usuários</h1>
+  <div id="divSearch">
+    <label><b>Busca:</b></label>
+    <input type="text" id="txtSearch" />
+    <input type="button" value="Buscar" id="btnSearch" />
+  </div>
+  <div id="divResult">
+    <div id="divFilteredUsers">
+      <label id="lblUsers">Nenhum usuário filtrado</label>
     </div>
-    <div id="divResult">
-      <div id="divFilteredUsers">
-        <label id="lblUsers">Nenhum usuário filtrado</label>
-      </div>
-      <div id="divStatistics">
-        <label id="lblStatistics">Nada a ser exibido</label>
-      </div>
+    <div id="divStatistics">
+      <label id="lblStatistics">Nada a ser exibido</label>
     </div>
-    <script src="./js/script.js"></script>
-  </body>
+  </div>
+  <script src="./js/script.js"></script>
+</body>
+
 </html>
